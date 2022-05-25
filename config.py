@@ -21,7 +21,7 @@ CartPole = {
     'memory_size': 50000,
     'n_episodes': 600,
     'batch_size': 32,
-    'target_update_frequency': 20, # best: 20
+    'target_update_frequency': 5, # best: 20
     'train_frequency': 1,
     'gamma': 0.95,
     'lr': 1e-4,
