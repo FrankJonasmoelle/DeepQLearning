@@ -10,5 +10,7 @@ def preprocess(obs, env):
     """Performs necessary observation preprocessing."""
     if env in ['CartPole-v0']:
         return torch.tensor(obs, device=device).float()
+    elif env == 'Pong-v0':
+        return torch.tensor(obs, device=device).float()/255
     else:
         raise ValueError('Please add necessary observation preprocessing instructions to preprocess() in utils.py.')
