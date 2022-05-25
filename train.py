@@ -123,7 +123,9 @@ if __name__ == '__main__':
                 torch.save(dqn, f'models/{args.env}_best.pt')
         
     print(returns)
-    plt.plot(range(len(returns)), returns)
+    plt.plot([10*x for x in range(len(returns))], returns)
+    plt.xlabel("Number of Episodes")
+    plt.ylabel("Average reward")
     plt.savefig(f"cart_pole_{env_config['target_update_frequency']}")
     plt.show()    
     # Close environment after training is completed.
